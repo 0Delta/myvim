@@ -21,7 +21,6 @@ RUN ./configure \
     --with-features=normal \
     --without-x \
     --disable-xsmp \
-    --enable-gui=no \
     --with-mac-arch=intel \
     --with-compiledby=0Delta \
     --prefix=/vimapp

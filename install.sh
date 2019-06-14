@@ -12,7 +12,6 @@ cd vim/src
     --with-features=huge \
     --without-x \
     --disable-xsmp \
-    --enable-gui=no \
     --with-compiledby=0Delta \
     --prefix=~/bin/vim
 
