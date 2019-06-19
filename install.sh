@@ -26,11 +26,11 @@ do
   CONFIG_CMD+=" --${v}"
 done
 
-cd vim
-git fetch
-git pull
+git submodule update
 
-cd src
+cd vim/src
 make distclean
 eval ${CONFIG_CMD}
 make -j $(sysctl -n hw.ncpu) && make install
+
+vim --version | head -n 4
