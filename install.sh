@@ -4,11 +4,11 @@ CONFIG+=("enable-fail-if-missing")
 CONFIG+=("disable-gui")
 # CONFIG+=("enable-pythoninterp=dynamic")
 # CONFIG+=("with-python-command=/usr/local/bin/python2")
-# CONFIG+=("enable-python3interp=dynamic")
-# CONFIG+=("with-python3-command=/usr/local/bin/python3")
+ CONFIG+=("enable-python3interp")
+ CONFIG+=("with-python3-command=/usr/local/bin/python3")
 # CONFIG+=("enable-rubyinterp")
-CONFIG+=("enable-luainterp")
-CONFIG+=("with-lua-prefix=/usr/local")
+#CONFIG+=("enable-luainterp")
+#CONFIG+=("with-lua-prefix=/usr/local")
 CONFIG+=("enable-cscope")
 CONFIG+=("disable-netbeans")
 CONFIG+=("enable-multibyte")
@@ -26,8 +26,11 @@ do
   CONFIG_CMD+=" --${v}"
 done
 
+cd vim
+git fetch
+git pull
 
-cd vim/src
+cd src
 make distclean
 eval ${CONFIG_CMD}
 make -j $(sysctl -n hw.ncpu) && make install
