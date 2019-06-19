@@ -17,6 +17,7 @@ CONFIG+=("disable-sysmouse")
 CONFIG+=("with-features=huge")
 CONFIG+=("without-x")
 CONFIG+=("disable-xsmp")
+CONFIG+=("enable-sound")
 CONFIG+=("with-compiledby=0Delta")
 CONFIG+=("prefix=$HOME/bin/vim")
 
