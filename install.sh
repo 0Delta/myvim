@@ -27,7 +27,7 @@ do
   CONFIG_CMD+=" --${v}"
 done
 
-git submodule update
+git submodule foreach git pull origin master && git add vim && git commit -m "update vim repo" && git push
 
 cd vim/src
 make distclean
