@@ -5,7 +5,7 @@ CONFIG+=("disable-gui")
 # CONFIG+=("enable-pythoninterp=dynamic")
 # CONFIG+=("with-python-command=/usr/local/bin/python2")
  CONFIG+=("enable-python3interp")
- CONFIG+=("with-python3-command=/usr/local/bin/python3")
+ CONFIG+=("with-python3-command=/usr/bin/python3.8")
 # CONFIG+=("enable-rubyinterp")
 #CONFIG+=("enable-luainterp")
 #CONFIG+=("with-lua-prefix=/usr/local")
@@ -19,7 +19,7 @@ CONFIG+=("without-x")
 CONFIG+=("disable-xsmp")
 CONFIG+=("enable-sound")
 CONFIG+=("with-compiledby=0Delta")
-CONFIG+=("prefix=$HOME/bin/vim")
+CONFIG+=("prefix=/usr/local")
 
 CONFIG_CMD="./configure"
 for v in "${CONFIG[@]}"
